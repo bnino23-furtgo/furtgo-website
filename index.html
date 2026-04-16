@@ -3,179 +3,435 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Furtgo – Rechtliche Informationen</title>
+  <title>Furtgo – Fahre für dich, nicht für 25%</title>
+  <meta name="description" content="Furtgo: CHF 60/Monat statt 25% Provision. Die faire Fahrer-App aus der Schweiz." />
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f5; color: #222; }
-    header { background: #1a1a2e; padding: 24px 20px; text-align: center; }
-    header h1 { color: #FFD700; font-size: 28px; letter-spacing: 1px; }
-    header p { color: #aaa; font-size: 13px; margin-top: 4px; }
-    nav { background: #16213e; display: flex; justify-content: center; gap: 8px; padding: 12px 20px; flex-wrap: wrap; }
-    nav a { color: #FFD700; text-decoration: none; font-size: 13px; padding: 6px 14px; border-radius: 20px; border: 1px solid #FFD700; }
-    nav a:hover { background: #FFD700; color: #000; }
-    .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
-    .card { background: #fff; border-radius: 14px; padding: 32px; margin-bottom: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
-    h2 { font-size: 20px; color: #1a1a2e; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #FFD700; }
-    h3 { font-size: 15px; color: #333; margin: 20px 0 8px; }
-    p, li { font-size: 14px; line-height: 1.7; color: #444; margin-bottom: 10px; }
-    ul { padding-left: 20px; }
-    a { color: #1a1a2e; }
-    .highlight { background: #fffbeb; border-left: 3px solid #FFD700; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; font-size: 13px; }
-    footer { text-align: center; padding: 24px; color: #aaa; font-size: 12px; background: #1a1a2e; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0d0d1a; color: #fff; }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(180deg, #1a1a2e 0%, #0d0d1a 100%);
+    }
+    .hero-badge {
+      background: #FFD70022;
+      border: 1px solid #FFD700;
+      color: #FFD700;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 18px;
+      border-radius: 30px;
+      margin-bottom: 24px;
+      letter-spacing: 0.5px;
+    }
+    .hero h1 {
+      font-size: clamp(32px, 6vw, 52px);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .hero h1 .gold { color: #FFD700; }
+    .hero .subtitle {
+      font-size: clamp(16px, 3vw, 20px);
+      color: #aaa;
+      max-width: 500px;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    /* RECHNUNG */
+    .rechnung {
+      background: #16213e;
+      border-radius: 16px;
+      padding: 28px 32px;
+      max-width: 400px;
+      width: 100%;
+      margin-bottom: 40px;
+      border: 1px solid #ffffff10;
+    }
+    .rechnung-zeile {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #ffffff10;
+      font-size: 15px;
+    }
+    .rechnung-zeile:last-child { border-bottom: none; }
+    .rechnung-label { color: #aaa; }
+    .rechnung-wert { font-weight: 700; }
+    .rechnung-wert.rot { color: #f87171; text-decoration: line-through; }
+    .rechnung-wert.gruen { color: #4ade80; font-size: 20px; }
+    .rechnung-ersparnis {
+      background: #4ade8022;
+      border: 1px solid #4ade80;
+      color: #4ade80;
+      text-align: center;
+      padding: 10px;
+      border-radius: 10px;
+      margin-top: 12px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    /* CTA */
+    .cta-btn {
+      display: inline-block;
+      background: #FFD700;
+      color: #000;
+      font-size: 17px;
+      font-weight: 800;
+      padding: 16px 40px;
+      border-radius: 14px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(255,215,0,0.3);
+    }
+    .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(255,215,0,0.4); }
+
+    /* VORTEILE */
+    .section {
+      padding: 80px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .section-title {
+      font-size: 28px;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .section-title .gold { color: #FFD700; }
+    .vorteile-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .vorteil-card {
+      background: #16213e;
+      border-radius: 14px;
+      padding: 24px;
+      border: 1px solid #ffffff10;
+    }
+    .vorteil-icon { font-size: 32px; margin-bottom: 12px; }
+    .vorteil-titel { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+    .vorteil-text { font-size: 13px; color: #aaa; line-height: 1.6; }
+
+    /* ANGEBOT */
+    .angebot-section {
+      background: linear-gradient(180deg, #0d0d1a 0%, #1a1a2e 100%);
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .angebot-box {
+      background: #16213e;
+      border: 2px solid #FFD700;
+      border-radius: 20px;
+      padding: 40px 28px;
+      max-width: 500px;
+      margin: 0 auto 32px;
+    }
+    .angebot-label {
+      color: #FFD700;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .angebot-preis {
+      font-size: 48px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+    .angebot-preis .klein { font-size: 20px; color: #aaa; font-weight: 400; }
+    .angebot-detail { color: #aaa; font-size: 14px; margin-bottom: 20px; }
+    .angebot-garantie {
+      background: #FFD70015;
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: 15px;
+      font-weight: 700;
+      color: #FFD700;
+    }
+    .zaehler {
+      margin: 32px auto;
+      max-width: 400px;
+    }
+    .zaehler-bar {
+      height: 10px;
+      background: #16213e;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-bottom: 8px;
+    }
+    .zaehler-fill {
+      height: 100%;
+      width: 12%;
+      background: linear-gradient(90deg, #FFD700, #ffaa00);
+      border-radius: 5px;
+      transition: width 1s ease;
+    }
+    .zaehler-text {
+      font-size: 14px;
+      color: #aaa;
+    }
+    .zaehler-text strong { color: #FFD700; }
+
+    /* FORMULAR */
+    .form-section {
+      padding: 80px 20px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .form-section h2 {
+      font-size: 24px;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .form-section .sub {
+      text-align: center;
+      color: #aaa;
+      font-size: 14px;
+      margin-bottom: 28px;
+    }
+    .form-group { margin-bottom: 14px; }
+    .form-label {
+      display: block;
+      font-size: 13px;
+      color: #aaa;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+    .form-input {
+      width: 100%;
+      background: #16213e;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 15px;
+      color: #fff;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-input:focus { border-color: #FFD700; }
+    .form-input::placeholder { color: #555; }
+    .form-select {
+      width: 100%;
+      background: #16213e;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 15px;
+      color: #fff;
+      outline: none;
+      appearance: none;
+      cursor: pointer;
+    }
+    .form-submit {
+      width: 100%;
+      background: #FFD700;
+      color: #000;
+      font-size: 16px;
+      font-weight: 800;
+      padding: 14px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: transform 0.2s;
+    }
+    .form-submit:hover { transform: translateY(-1px); }
+    .form-hinweis {
+      text-align: center;
+      color: #555;
+      font-size: 12px;
+      margin-top: 12px;
+    }
+
+    /* VERTRAUEN */
+    .vertrauen {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      padding: 40px 20px 80px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .vertrauen-item {
+      text-align: center;
+    }
+    .vertrauen-icon { font-size: 28px; margin-bottom: 4px; }
+    .vertrauen-text { font-size: 13px; color: #aaa; }
+
+    /* FOOTER */
+    footer {
+      background: #16213e;
+      text-align: center;
+      padding: 24px 20px;
+    }
+    footer a { color: #FFD700; text-decoration: none; font-size: 13px; margin: 0 8px; }
+    footer a:hover { text-decoration: underline; }
+    footer .copy { color: #555; font-size: 12px; margin-top: 10px; }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>🚕 Furtgo</h1>
-  <p>Rechtliche Informationen</p>
-</header>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">PRELAUNCH — Bald verfügbar</div>
+  <h1>Du gibst <span class="gold">25%</span> deines<br>Umsatzes ab?</h1>
+  <p class="subtitle">Furtgo ist die faire Alternative. Ein Abo statt Provision. Dein Verdienst bleibt bei dir.</p>
 
-<nav>
-  <a href="#impressum">Impressum</a>
-  <a href="#agb">AGB</a>
-  <a href="#datenschutz">Datenschutz</a>
-</nav>
-
-<div class="container">
-
-  <!-- IMPRESSUM -->
-  <div class="card" id="impressum">
-    <h2>Impressum</h2>
-
-    <h3>Betreiber der App</h3>
-    <p>
-      <strong>[Vorname Nachname]</strong><br />
-      [Strasse und Hausnummer]<br />
-      [PLZ] [Ort], Schweiz<br />
-      E-Mail: <a href="mailto:support.furtgo@gmail.com">support.furtgo@gmail.com</a>
-    </p>
-
-    <h3>App</h3>
-    <p>
-      Name: Furtgo<br />
-      Plattform: Android (Google Play Store)<br />
-      Zweck: Vermittlung von Fahrdiensten zwischen Fahrgästen und Fahrern
-    </p>
-
-    <div class="highlight">
-      Furtgo ist kein Taxiunternehmen. Die App vermittelt lediglich Fahrten zwischen privaten Nutzern. Jeder Fahrer ist selbst für die Einhaltung der gesetzlichen Vorschriften verantwortlich.
+  <div class="rechnung">
+    <div class="rechnung-zeile">
+      <span class="rechnung-label">Dein Monatsumsatz</span>
+      <span class="rechnung-wert">CHF 8'000</span>
     </div>
-  </div>
-
-  <!-- AGB -->
-  <div class="card" id="agb">
-    <h2>Allgemeine Geschäftsbedingungen (AGB)</h2>
-    <p><em>Stand: April 2026</em></p>
-
-    <h3>1. Geltungsbereich</h3>
-    <p>Diese AGB gelten für alle Nutzer der App Furtgo (Fahrgäste und Fahrer) mit Wohnsitz in der Schweiz.</p>
-
-    <h3>2. Leistungsbeschreibung</h3>
-    <p>Furtgo ist eine Vermittlungsplattform, die Fahrgäste und Fahrer miteinander verbindet. Furtgo selbst erbringt keine Transportleistungen und ist kein Beförderungsunternehmen.</p>
-
-    <h3>3. Registrierung</h3>
-    <p>Die Nutzung der App erfordert eine Registrierung mit vollständigen und wahrheitsgemässen Angaben. Pro Person ist nur ein Konto erlaubt. Fahrgäste und Fahrer benötigen jeweils ein separates Konto.</p>
-
-    <h3>4. Pflichten der Fahrer</h3>
-    <ul>
-      <li>Gültige Fahrerlaubnis (Führerschein)</li>
-      <li>Fahrzeug nicht älter als 12 Jahre</li>
-      <li>Gültige Fahrzeugversicherung</li>
-      <li>Einhaltung aller Verkehrsregeln</li>
-      <li>Aktives Monatsabonnement (CHF 99/Monat)</li>
-    </ul>
-
-    <h3>5. Tarife</h3>
-    <p>
-      <strong>Furtgo X:</strong> CHF 3.50 Grundpreis + CHF 2.20 pro km<br />
-      <strong>Furtgo Comfort:</strong> CHF 5.00 Grundpreis + CHF 2.80 pro km
-    </p>
-    <p>Der Fahrgast wählt vor der Fahrt die gewünschte Kategorie. Der angezeigte Preis ist ein Schätzpreis basierend auf der Luftliniendistanz.</p>
-
-    <h3>6. Fahrer-Abonnement</h3>
-    <p>Fahrer bezahlen ein monatliches Abonnement von CHF 99. Ohne aktives Abonnement ist kein Zugriff auf das Fahrer-Dashboard möglich. Das Abonnement wird nicht automatisch verlängert und muss manuell erneuert werden.</p>
-
-    <h3>7. Bewertungen</h3>
-    <p>Fahrgäste können Fahrer nach jeder Fahrt bewerten. Fahrer mit wiederholten schlechten Bewertungen können gesperrt werden.</p>
-
-    <h3>8. Haftungsausschluss</h3>
-    <p>Furtgo übernimmt keine Haftung für Schäden, die während einer vermittelten Fahrt entstehen. Die Haftung liegt beim jeweiligen Fahrer und dessen Versicherung. Furtgo haftet nicht für Ausfälle der App oder technische Störungen.</p>
-
-    <h3>9. Konto-Sperrung</h3>
-    <p>Furtgo behält sich das Recht vor, Konten bei Verstoss gegen diese AGB ohne Vorwarnung zu sperren.</p>
-
-    <h3>10. Änderungen der AGB</h3>
-    <p>Furtgo kann diese AGB jederzeit anpassen. Nutzer werden per E-Mail informiert. Die weitere Nutzung der App gilt als Zustimmung zu den neuen AGB.</p>
-
-    <h3>11. Anwendbares Recht</h3>
-    <p>Es gilt Schweizer Recht. Gerichtsstand ist der Wohnort des Betreibers.</p>
-  </div>
-
-  <!-- DATENSCHUTZ -->
-  <div class="card" id="datenschutz">
-    <h2>Datenschutzerklärung</h2>
-    <p><em>Stand: April 2026</em></p>
-
-    <h3>1. Verantwortlicher</h3>
-    <p>
-      [Vorname Nachname]<br />
-      E-Mail: <a href="mailto:support.furtgo@gmail.com">support.furtgo@gmail.com</a>
-    </p>
-
-    <h3>2. Welche Daten wir erheben</h3>
-    <ul>
-      <li><strong>Registrierungsdaten:</strong> Vorname, Nachname, E-Mail, Telefonnummer, Adresse</li>
-      <li><strong>Standortdaten:</strong> GPS-Koordinaten während der Nutzung (nur wenn App geöffnet ist)</li>
-      <li><strong>Fahrtdaten:</strong> Abholorte, Zielorte, Preise, Datum und Uhrzeit</li>
-      <li><strong>Dokumente (nur Fahrer):</strong> Hochgeladene Fotos zur Verifizierung</li>
-      <li><strong>Bewertungen:</strong> Abgegebene und empfangene Bewertungen</li>
-    </ul>
-
-    <h3>3. Zweck der Datenverarbeitung</h3>
-    <ul>
-      <li>Bereitstellung und Verbesserung des Dienstes</li>
-      <li>Vermittlung von Fahrten zwischen Fahrgästen und Fahrern</li>
-      <li>Verifizierung von Fahrern</li>
-      <li>Sicherheit und Missbrauchsverhinderung</li>
-    </ul>
-
-    <h3>4. Dienstleister</h3>
-    <p>Furtgo nutzt folgende externe Dienste:</p>
-    <ul>
-      <li><strong>Google Firebase</strong> (Authentifizierung, Datenbank, Datenspeicherung) — <a href="https://firebase.google.com/support/privacy" target="_blank">Datenschutzrichtlinie</a></li>
-      <li><strong>OpenStreetMap / Nominatim</strong> (Adresssuche) — <a href="https://osmfoundation.org/wiki/Privacy_Policy" target="_blank">Datenschutzrichtlinie</a></li>
-      <li><strong>Google Maps</strong> (Navigation) — <a href="https://policies.google.com/privacy" target="_blank">Datenschutzrichtlinie</a></li>
-    </ul>
-
-    <h3>5. Datenweitergabe</h3>
-    <p>Deine Daten werden nicht an Dritte verkauft. Fahrername und Bewertung werden dem Fahrgast angezeigt und umgekehrt, soweit dies für die Fahrvermittlung erforderlich ist.</p>
-
-    <h3>6. Speicherdauer</h3>
-    <p>Daten werden gespeichert solange das Konto aktiv ist. Nach Kontolöschung werden alle personenbezogenen Daten innerhalb von 30 Tagen gelöscht.</p>
-
-    <h3>7. Deine Rechte</h3>
-    <p>Du hast das Recht auf:</p>
-    <ul>
-      <li>Auskunft über deine gespeicherten Daten</li>
-      <li>Berichtigung unrichtiger Daten</li>
-      <li>Löschung deiner Daten (Konto löschen in der App)</li>
-      <li>Datenportabilität</li>
-    </ul>
-    <p>Anfragen an: <a href="mailto:support.furtgo@gmail.com">support.furtgo@gmail.com</a></p>
-
-    <h3>8. Standortdaten</h3>
-    <p>Die App erhebt GPS-Daten nur während der aktiven Nutzung. Fahrer-Standorte werden alle 10 Sekunden aktualisiert und sind nur für Fahrgäste mit einer aktiven Fahrt sichtbar. Standortdaten werden nicht dauerhaft gespeichert.</p>
-
-    <div class="highlight">
-      Diese Datenschutzerklärung entspricht dem Schweizer Datenschutzgesetz (DSG) sowie der DSGVO (EU).
+    <div class="rechnung-zeile">
+      <span class="rechnung-label">Uber nimmt (25%)</span>
+      <span class="rechnung-wert rot">– CHF 2'000</span>
     </div>
+    <div class="rechnung-zeile">
+      <span class="rechnung-label">Furtgo nimmt</span>
+      <span class="rechnung-wert gruen">CHF 60</span>
+    </div>
+    <div class="rechnung-ersparnis">Du sparst CHF 1'940 pro Monat</div>
   </div>
 
+  <a href="#anmelden" class="cta-btn">Jetzt Platz sichern</a>
 </div>
 
+<!-- VORTEILE -->
+<div class="section">
+  <h2 class="section-title">Warum <span class="gold">Furtgo</span>?</h2>
+  <div class="vorteile-grid">
+    <div class="vorteil-card">
+      <div class="vorteil-icon">💰</div>
+      <div class="vorteil-titel">CHF 60/Monat. Fertig.</div>
+      <div class="vorteil-text">Kein Prozent-Abzug. Egal ob du 5'000 oder 15'000 verdienst — du zahlst immer gleich.</div>
+    </div>
+    <div class="vorteil-card">
+      <div class="vorteil-icon">🎯</div>
+      <div class="vorteil-titel">Du bestimmst den Preis</div>
+      <div class="vorteil-text">Wähle deinen Tarif selbst. Du bist Unternehmer, kein Angestellter.</div>
+    </div>
+    <div class="vorteil-card">
+      <div class="vorteil-icon">🇨🇭</div>
+      <div class="vorteil-titel">Schweizer Firma</div>
+      <div class="vorteil-text">Kein Silicon Valley Konzern. Ein Schweizer Dienst für Schweizer Fahrer.</div>
+    </div>
+    <div class="vorteil-card">
+      <div class="vorteil-icon">📱</div>
+      <div class="vorteil-titel">App bereits fertig</div>
+      <div class="vorteil-text">Karte, Chat, Bewertungen, Quittungen per E-Mail — alles eingebaut und getestet.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ANGEBOT -->
+<div class="angebot-section" id="angebot">
+  <h2 class="section-title">Exklusives <span class="gold">Prelaunch-Angebot</span></h2>
+
+  <div class="angebot-box">
+    <div class="angebot-label">ERSTE 100 FAHRER</div>
+    <div class="angebot-preis">CHF 60 <span class="klein">/Monat</span></div>
+    <div class="angebot-detail">12 Monate Preisgarantie — egal was danach kommt</div>
+    <div class="angebot-garantie">Diesen Preis bekommst du nie wieder</div>
+  </div>
+
+  <div class="zaehler">
+    <div class="zaehler-bar">
+      <div class="zaehler-fill"></div>
+    </div>
+    <p class="zaehler-text"><strong>12 / 100</strong> Plätze vergeben</p>
+  </div>
+
+  <a href="#anmelden" class="cta-btn">Platz sichern</a>
+</div>
+
+<!-- FORMULAR -->
+<div class="form-section" id="anmelden">
+  <h2>Jetzt Platz sichern</h2>
+  <p class="sub">Unverbindlich anmelden — wir kontaktieren dich sobald es losgeht.</p>
+
+  <form action="https://formsubmit.co/support.furtgo@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="Neuer Furtgo Prelaunch-Interessent!" />
+    <input type="hidden" name="_captcha" value="false" />
+    <input type="hidden" name="_next" value="https://furtgo.ch/danke.html" />
+    <input type="text" name="_honey" style="display:none" />
+
+    <div class="form-group">
+      <label class="form-label">Vorname & Nachname</label>
+      <input type="text" name="name" class="form-input" placeholder="Max Muster" required />
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">E-Mail</label>
+      <input type="email" name="email" class="form-input" placeholder="max@beispiel.ch" required />
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Telefon</label>
+      <input type="tel" name="telefon" class="form-input" placeholder="+41 79 123 45 67" required />
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Stadt / Region</label>
+      <input type="text" name="stadt" class="form-input" placeholder="z.B. St. Gallen" required />
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Fährst du aktuell für eine andere Plattform?</label>
+      <select name="plattform" class="form-select">
+        <option value="keine">Nein, noch nicht</option>
+        <option value="uber">Ja, Uber</option>
+        <option value="bolt">Ja, Bolt</option>
+        <option value="andere">Ja, andere</option>
+      </select>
+    </div>
+
+    <button type="submit" class="form-submit">Unverbindlich anmelden</button>
+    <p class="form-hinweis">Keine Zahlung nötig. Wir melden uns bei dir.</p>
+  </form>
+</div>
+
+<!-- VERTRAUEN -->
+<div class="vertrauen">
+  <div class="vertrauen-item">
+    <div class="vertrauen-icon">🔒</div>
+    <div class="vertrauen-text">Daten geschützt</div>
+  </div>
+  <div class="vertrauen-item">
+    <div class="vertrauen-icon">🇨🇭</div>
+    <div class="vertrauen-text">Schweizer Firma</div>
+  </div>
+  <div class="vertrauen-item">
+    <div class="vertrauen-icon">💬</div>
+    <div class="vertrauen-text">Support auf Deutsch</div>
+  </div>
+  <div class="vertrauen-item">
+    <div class="vertrauen-icon">✅</div>
+    <div class="vertrauen-text">App bereits fertig</div>
+  </div>
+</div>
+
+<!-- FOOTER -->
 <footer>
-  <p>© 2026 Furtgo · <a href="mailto:support.furtgo@gmail.com" style="color:#FFD700;">support.furtgo@gmail.com</a></p>
+  <div>
+    <a href="legal.html#impressum">Impressum</a>
+    <a href="legal.html#agb">AGB</a>
+    <a href="legal.html#datenschutz">Datenschutz</a>
+  </div>
+  <p class="copy">&copy; 2026 Furtgo &middot; <a href="mailto:support.furtgo@gmail.com">support.furtgo@gmail.com</a></p>
 </footer>
 
 </body>
