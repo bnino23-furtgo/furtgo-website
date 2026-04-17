@@ -288,6 +288,26 @@
     }
     .zitat-autor strong { color: #FFD700; font-weight: 700; }
 
+    /* MANIFEST */
+    .manifest-section {
+      background: linear-gradient(180deg, #1a1a2e 0%, #0d0d1a 100%);
+      padding: 70px 20px;
+      text-align: center;
+    }
+    .manifest-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .manifest-line {
+      font-size: clamp(20px, 3.5vw, 28px);
+      font-weight: 800;
+      line-height: 1.35;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    .manifest-line:last-child { margin-bottom: 0; }
+    .manifest-line .gold { color: #FFD700; }
+
     /* VERTRAUEN */
     .vertrauen {
       display: flex;
@@ -367,16 +387,6 @@
       <div class="vorteil-text">Keine leeren Versprechen. Karte, Chat, Bewertungen, E-Mail-Quittungen — alles drin, alles läuft. Wir warten nur noch auf dich.</div>
     </div>
     <div class="vorteil-card">
-      <div class="vorteil-icon">🌙</div>
-      <div class="vorteil-titel">Fahr wann DU willst</div>
-      <div class="vorteil-text">Keine Pflichtschichten. Kein Algorithmus, der dich strafft. Morgens, abends, nachts — du entscheidest.</div>
-    </div>
-    <div class="vorteil-card">
-      <div class="vorteil-icon">👨‍👩‍👧</div>
-      <div class="vorteil-titel">Zeit für dein Zuhause</div>
-      <div class="vorteil-text">Mehr Verdienst heisst: weniger Schichten. Mehr Abende mit den Menschen, die auf dich warten.</div>
-    </div>
-    <div class="vorteil-card">
       <div class="vorteil-icon">🤝</div>
       <div class="vorteil-titel">Ein Mensch. Kein Bot.</div>
       <div class="vorteil-text">Du hast ein Problem? Du kriegst eine Antwort. Auf Deutsch. Von jemandem, der dich versteht.</div>
@@ -394,10 +404,18 @@
   </div>
 </div>
 
+<!-- MANIFEST -->
+<div class="manifest-section">
+  <div class="manifest-inner">
+    <p class="manifest-line">Andere machen die Fahrten billig — <span class="gold">wir machen dein Geschäft profitabel.</span></p>
+    <p class="manifest-line">Sei kein Spielball von ausländischen Investoren. <span class="gold">Sei Chef deiner eigenen Software.</span></p>
+  </div>
+</div>
+
 <!-- ZITAT -->
 <div class="zitat-section">
   <div class="zitat-box">
-    <span class="quote-mark">„</span>Endlich eine App, bei der ich weiss, wofür ich bezahle. Die 60 CHF Fixkosten habe ich nach zwei Stunden wieder drin.<span class="quote-mark">"</span>
+    <span class="quote-mark">„</span>Endlich eine App, bei der ich weiss, wofür ich bezahle. Die 60 CHF Fixkosten habe ich schnell wieder drin.<span class="quote-mark">"</span>
     <div class="zitat-autor">— <strong>Marc</strong>, Limousinenfahrer aus Kloten</div>
   </div>
 </div>
