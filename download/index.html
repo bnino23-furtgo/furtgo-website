@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Furtgo – App herunterladen</title>
+  <meta name="description" content="Furtgo App installieren — Android APK direkt, iOS kommt bald." />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0d0d1a;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      background: linear-gradient(180deg, #1a1a2e 0%, #0d0d1a 100%);
+    }
+    .logo {
+      font-size: 36px;
+      font-weight: 800;
+      color: #FFD700;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+    h1 {
+      font-size: clamp(26px, 5vw, 38px);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    h1 .gold { color: #FFD700; }
+    .subtitle {
+      font-size: 16px;
+      color: #aaa;
+      max-width: 420px;
+      line-height: 1.5;
+      text-align: center;
+      margin-bottom: 36px;
+    }
+    .detected {
+      background: #FFD70022;
+      border: 1px solid #FFD700;
+      color: #FFD700;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    .btns {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      width: 100%;
+      max-width: 360px;
+      margin-bottom: 28px;
+    }
+    .dl-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 18px 24px;
+      border-radius: 12px;
+      font-size: 17px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s;
+      border: 2px solid transparent;
+    }
+    .dl-btn.android {
+      background: #FFD700;
+      color: #0d0d1a;
+    }
+    .dl-btn.android:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px #FFD70044;
+    }
+    .dl-btn.ios {
+      background: transparent;
+      color: #666;
+      border-color: #333;
+      cursor: not-allowed;
+    }
+    .dl-btn.highlight {
+      transform: scale(1.03);
+      box-shadow: 0 8px 30px #FFD70055;
+    }
+    .hint {
+      font-size: 13px;
+      color: #888;
+      text-align: center;
+      max-width: 420px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .hint strong { color: #FFD700; }
+    .back {
+      color: #666;
+      text-decoration: none;
+      font-size: 14px;
+      margin-top: 12px;
+    }
+    .back:hover { color: #FFD700; }
+    .soon-badge {
+      font-size: 11px;
+      background: #333;
+      color: #999;
+      padding: 3px 8px;
+      border-radius: 10px;
+      margin-left: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo">Furtgo</div>
+  <h1>App <span class="gold">installieren</span></h1>
+  <p class="subtitle">Lade Furtgo auf dein Handy und werde Teil der Bewegung.</p>
+
+  <div class="detected" id="detected" style="display:none;"></div>
+
+  <div class="btns">
+    <a href="https://expo.dev/artifacts/eas/gRWV3pY8wBK9Y6XbhYRKVj.apk"
+       class="dl-btn android"
+       id="btn-android"
+       download>
+      <span>&#x2193;</span>
+      <span>Android APK herunterladen</span>
+    </a>
+
+    <span class="dl-btn ios" id="btn-ios">
+      <span>&#xF8FF;</span>
+      <span>iPhone<span class="soon-badge">bald</span></span>
+    </span>
+  </div>
+
+  <p class="hint">
+    <strong>Android-Installation:</strong> Nach dem Download auf die Datei tippen. Falls die Installation blockiert wird: Einstellungen → Sicherheit → <em>Installation aus unbekannten Quellen</em> erlauben.
+  </p>
+
+  <p class="hint" id="ios-hint" style="display:none;">
+    <strong>iPhone-Nutzer:</strong> Die iOS-Version kommt in K&uuml;rze via TestFlight. Schreib uns kurz auf <a href="mailto:support.furtgo@gmail.com" style="color:#FFD700;">support.furtgo@gmail.com</a> — wir melden uns, sobald sie bereit ist.
+  </p>
+
+  <a href="/" class="back">&#x2190; zur&uuml;ck zur Hauptseite</a>
+
+  <script>
+    (function() {
+      var ua = navigator.userAgent || '';
+      var isAndroid = /android/i.test(ua);
+      var isIOS = /iphone|ipad|ipod/i.test(ua) && !window.MSStream;
+      var detected = document.getElementById('detected');
+      var btnAndroid = document.getElementById('btn-android');
+      var iosHint = document.getElementById('ios-hint');
+
+      if (isAndroid) {
+        detected.textContent = 'Android erkannt';
+        detected.style.display = 'inline-block';
+        btnAndroid.classList.add('highlight');
+      } else if (isIOS) {
+        detected.textContent = 'iPhone erkannt';
+        detected.style.display = 'inline-block';
+        iosHint.style.display = 'block';
+      }
+    })();
+  </script>
+
+</body>
+</html>
