@@ -82,10 +82,12 @@
       box-shadow: 0 8px 24px #FFD70044;
     }
     .dl-btn.ios {
-      background: transparent;
-      color: #666;
-      border-color: #333;
-      cursor: not-allowed;
+      background: #fff;
+      color: #0d0d1a;
+    }
+    .dl-btn.ios:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px #ffffff33;
     }
     .dl-btn.highlight {
       transform: scale(1.03);
@@ -134,18 +136,23 @@
       <span>Android APK herunterladen</span>
     </a>
 
-    <span class="dl-btn ios" id="btn-ios">
+    <a href="https://app.furtgo.ch" class="dl-btn ios" id="btn-ios">
       <span>&#xF8FF;</span>
-      <span>iPhone<span class="soon-badge">bald</span></span>
-    </span>
+      <span>iPhone — Web-App öffnen</span>
+    </a>
   </div>
 
-  <p class="hint">
+  <p class="hint" id="android-hint">
     <strong>Android-Installation:</strong> Nach dem Download auf die Datei tippen. Falls die Installation blockiert wird: Einstellungen → Sicherheit → <em>Installation aus unbekannten Quellen</em> erlauben.
   </p>
 
   <p class="hint" id="ios-hint" style="display:none;">
-    <strong>iPhone-Nutzer:</strong> Die iOS-Version kommt in K&uuml;rze via TestFlight. Schreib uns kurz auf <a href="mailto:support.furtgo@gmail.com" style="color:#FFD700;">support.furtgo@gmail.com</a> — wir melden uns, sobald sie bereit ist.
+    <strong>iPhone-Installation (Fahrgast):</strong><br>
+    1. Tippe oben auf <em>Web-App öffnen</em><br>
+    2. Im Safari unten auf das <strong>Teilen-Symbol</strong> tippen<br>
+    3. «<strong>Zum Home-Bildschirm</strong>» wählen<br>
+    4. Furtgo-Icon erscheint wie eine echte App<br><br>
+    <em>Hinweis für Fahrer:</em> Die Fahrer-Funktionen brauchen Android. Die iOS-Version für Fahrer kommt später.
   </p>
 
   <a href="/" class="back">&#x2190; zur&uuml;ck zur Hauptseite</a>
@@ -157,6 +164,8 @@
       var isIOS = /iphone|ipad|ipod/i.test(ua) && !window.MSStream;
       var detected = document.getElementById('detected');
       var btnAndroid = document.getElementById('btn-android');
+      var btnIos = document.getElementById('btn-ios');
+      var androidHint = document.getElementById('android-hint');
       var iosHint = document.getElementById('ios-hint');
 
       if (isAndroid) {
@@ -166,7 +175,9 @@
       } else if (isIOS) {
         detected.textContent = 'iPhone erkannt';
         detected.style.display = 'inline-block';
+        btnIos.classList.add('highlight');
         iosHint.style.display = 'block';
+        androidHint.style.display = 'none';
       }
     })();
   </script>
