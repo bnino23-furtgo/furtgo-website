@@ -109,7 +109,7 @@
   <!-- AGB -->
   <div class="card" id="agb">
     <h2>Allgemeine Gesch&auml;ftsbedingungen (AGB)</h2>
-    <p><em>Stand: 16. Mai 2026</em></p>
+    <p><em>Stand: 22. Mai 2026</em></p>
 
     <h3>1. Geltungsbereich</h3>
     <p>Diese AGB gelten f&uuml;r alle Nutzer der App Furtgo (Fahrg&auml;ste und Fahrer) mit Wohnsitz oder Aufenthalt in der Schweiz. Anbieterin der Plattform ist die Bajic Mobility Solutions, St.Gallerstrasse 141, 8645 Jona.</p>
@@ -151,7 +151,7 @@
     <p>Der Fahrgast w&auml;hlt vor der Bestellung die gew&uuml;nschte Kategorie und sieht den exakten Preis basierend auf der Luftliniendistanz zwischen Abhol- und Zielort. Der Preis bleibt nach Bestellung verbindlich.</p>
 
     <h3>7. Fahrer-Abonnement</h3>
-    <p>Fahrer bezahlen ein monatliches Abonnement von CHF 60. Ohne aktives Abonnement ist das Online-Schalten und Annehmen von Fahrten nicht m&ouml;glich. Die Zahlung erfolgt online &uuml;ber PostFinance Checkout (Kredit-/Debitkarte, PostFinance Card, PostFinance Pay). Das Abonnement verl&auml;ngert sich automatisch alle 30 Tage durch Belastung des hinterlegten Zahlungsmittels. Fahrer k&ouml;nnen das Abonnement jederzeit in den App-Einstellungen k&uuml;ndigen; der Zugang bleibt bis zum Ende der bereits bezahlten Periode bestehen. Bei fehlgeschlagener Belastung versucht Furtgo bis zu dreimal &uuml;ber f&uuml;nf Tage eine erneute Abbuchung; danach wird das Abonnement deaktiviert. Rechnungen werden als PDF per E-Mail zugestellt und sind zus&auml;tzlich in der App unter &laquo;Meine Rechnungen&raquo; abrufbar.</p>
+    <p>Fahrer bezahlen ein monatliches Abonnement von CHF 60. Ohne aktives Abonnement ist das Online-Schalten und Annehmen von Fahrten nicht m&ouml;glich. Die Zahlung erfolgt online &uuml;ber PostFinance Checkout (Kredit-/Debitkarte, PostFinance Card, PostFinance Pay). Das Abonnement verl&auml;ngert sich automatisch alle 30 Tage durch Belastung des hinterlegten Zahlungsmittels. Fahrer k&ouml;nnen das Abonnement jederzeit in den App-Einstellungen k&uuml;ndigen; der Zugang bleibt bis zum Ende der bereits bezahlten Periode bestehen. Bei fehlgeschlagener Belastung unternimmt Furtgo bis zu drei weitere Abbuchungsversuche im Abstand von jeweils zwei Tagen (insgesamt sechs Tage); danach wird das Abonnement deaktiviert. Rechnungen werden als PDF per E-Mail zugestellt und sind zus&auml;tzlich in der App unter &laquo;Meine Rechnungen&raquo; abrufbar.</p>
 
     <h3>8. Bewertungen</h3>
     <p>Fahrg&auml;ste und Fahrer k&ouml;nnen sich nach jeder Fahrt gegenseitig bewerten. Konten mit wiederholten schlechten Bewertungen oder begr&uuml;ndeten Beschwerden k&ouml;nnen gesperrt werden.</p>
@@ -172,7 +172,7 @@
   <!-- DATENSCHUTZ -->
   <div class="card" id="datenschutz">
     <h2>Datenschutzerkl&auml;rung</h2>
-    <p><em>Stand: 16. Mai 2026</em></p>
+    <p><em>Stand: 22. Mai 2026</em></p>
 
     <h3>1. Verantwortliche Stelle</h3>
     <p>
@@ -193,6 +193,7 @@
       <li><strong>Support-Anfragen:</strong> Thema, Nachricht, Kontaktdaten (zur Beantwortung)</li>
       <li><strong>Audit-Log:</strong> &Auml;nderungen an Fahrt- und Schicht-Daten werden mit Zeitstempel und Vor-/Nachher-Wert protokolliert (Sicherheits- und Nachvollziehbarkeitszwecke)</li>
       <li><strong>Online-Events:</strong> Zeitstempel und Standort beim Online-/Offline-Schalten des Fahrers</li>
+      <li><strong>Push-Token:</strong> ger&auml;tespezifische Kennung von Firebase Cloud Messaging zum Versand von Auftrags- und System-Benachrichtigungen an die App</li>
     </ul>
 
     <h3>3. Zweck der Datenverarbeitung</h3>
@@ -236,7 +237,8 @@
     <p>Anfragen an: <a href="mailto:support.furtgo@gmail.com">support.furtgo@gmail.com</a> &mdash; wir antworten in der Regel innerhalb von 14 Tagen.</p>
 
     <h3>8. Standortdaten</h3>
-    <p>GPS-Daten werden nur w&auml;hrend der aktiven Nutzung erhoben. <strong>Fahrer-Standorte</strong> werden alle 10 Sekunden aktualisiert, solange der Fahrer online ist; sie sind f&uuml;r Fahrg&auml;ste in der Such-Phase als Punkt auf der Karte sichtbar (ohne Identit&auml;t). <strong>Fahrgast-Standort</strong> wird beim Erstellen einer Bestellung erfasst. Eine Hintergrund-Standortverfolgung erfolgt nicht.</p>
+    <p><strong>Fahrer-Standorte</strong> werden alle 10 Sekunden aktualisiert, solange der Fahrer online geschaltet ist. Die Standort-Erfassung bleibt aktiv, auch wenn die App nicht im Vordergrund ist (z.B. bei Nutzung anderer Apps w&auml;hrend der Schicht). Eine dauerhafte, f&uuml;r den Fahrer sichtbare Benachrichtigung sowie die schwebende Furtgo-Bubble zeigen klar an, dass die Standort-Erfassung l&auml;uft. Mit dem Offline-Schalten endet die Erfassung sofort. Die Standorte sind f&uuml;r Fahrg&auml;ste in der Such-Phase als Punkt auf der Karte sichtbar (ohne Identit&auml;t).</p>
+    <p><strong>Fahrgast-Standort</strong> wird beim Erstellen einer Bestellung erfasst. Eine Hintergrund-Standortverfolgung von Fahrg&auml;sten findet nicht statt.</p>
 
     <h3>9. E-Mail-Versand</h3>
     <p>Quittungen, Verifikations-E-Mails und Support-Antworten werden &uuml;ber den Gmail-SMTP-Server der Adresse support.furtgo@gmail.com versendet (mittels Firebase &laquo;Trigger Email&raquo;-Extension). Inhalt und Empf&auml;nger werden in einer internen Mail-Collection in Firestore protokolliert.</p>
