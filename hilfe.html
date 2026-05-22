@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Furtgo – Hilfe &amp; FAQ</title>
+  <meta name="description" content="Antworten auf die häufigsten Fragen zu Furtgo — Bubble, Push-Sound, Abo, Login, Verifikation." />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f5; color: #222; }
+    header { background: #1a1a2e; padding: 24px 20px; text-align: center; }
+    header h1 { color: #FFD700; font-size: 28px; letter-spacing: 1px; }
+    header p { color: #aaa; font-size: 13px; margin-top: 4px; }
+    header a { color: #aaa; text-decoration: none; font-size: 13px; }
+    header a:hover { color: #FFD700; }
+    nav { background: #16213e; display: flex; justify-content: center; gap: 8px; padding: 12px 20px; flex-wrap: wrap; }
+    nav a { color: #FFD700; text-decoration: none; font-size: 13px; padding: 6px 14px; border-radius: 20px; border: 1px solid #FFD700; }
+    nav a:hover { background: #FFD700; color: #000; }
+    .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+    .card { background: #fff; border-radius: 14px; padding: 32px; margin-bottom: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+    h2 { font-size: 20px; color: #1a1a2e; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #FFD700; }
+    details { border-bottom: 1px solid #eee; padding: 14px 0; }
+    details:last-child { border-bottom: none; }
+    details summary { cursor: pointer; font-weight: 600; color: #1a1a2e; font-size: 15px; padding: 4px 0; list-style: none; position: relative; padding-left: 24px; }
+    details summary::-webkit-details-marker { display: none; }
+    details summary::before { content: '+'; position: absolute; left: 0; top: 4px; color: #FFD700; font-weight: 800; font-size: 18px; }
+    details[open] summary::before { content: '−'; }
+    details p, details li { font-size: 14px; line-height: 1.7; color: #444; margin: 10px 0 0 24px; }
+    details ol, details ul { margin-left: 24px; margin-top: 10px; }
+    details li { margin-bottom: 6px; }
+    a { color: #1a1a2e; }
+    .highlight { background: #fffbeb; border-left: 3px solid #FFD700; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; font-size: 13px; }
+    .kontakt { background: #1a1a2e; color: #fff; padding: 24px; border-radius: 14px; text-align: center; margin-top: 30px; }
+    .kontakt h2 { color: #FFD700; border-bottom: none; padding-bottom: 0; }
+    .kontakt a { color: #FFD700; font-weight: 600; }
+    footer { text-align: center; padding: 24px; color: #aaa; font-size: 12px; background: #1a1a2e; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Furtgo</h1>
+  <p>Hilfe &amp; H&auml;ufige Fragen</p>
+  <br />
+  <a href="index.html">&larr; Zur&uuml;ck zur Startseite</a>
+</header>
+
+<nav>
+  <a href="#fahrer">F&uuml;r Fahrer</a>
+  <a href="#fahrgast">F&uuml;r Fahrg&auml;ste</a>
+  <a href="#installation">Installation</a>
+  <a href="#abo">Abo &amp; Zahlung</a>
+</nav>
+
+<div class="container">
+
+  <!-- FAHRER -->
+  <div class="card" id="fahrer">
+    <h2>F&uuml;r Fahrer</h2>
+
+    <details>
+      <summary>Die Furtgo-Bubble erscheint nicht &uuml;ber anderen Apps</summary>
+      <p>Damit die Bubble &uuml;ber anderen Apps angezeigt werden kann, brauchst du <strong>zwei Berechtigungen</strong>:</p>
+      <ol>
+        <li><strong>&laquo;&Uuml;ber anderen Apps anzeigen&raquo;</strong> &mdash; beim ersten Online-Schalten fragt Furtgo nach dieser Erlaubnis. Wenn du auf &laquo;Sp&auml;ter&raquo; geklickt hast, &ouml;ffne: Android Einstellungen &rarr; Apps &rarr; Furtgo &rarr; Erweitert &rarr; &Uuml;ber anderen Apps anzeigen &rarr; aktivieren.</li>
+        <li><strong>Akku-Optimierung deaktivieren</strong> &mdash; auf Xiaomi/Huawei/Samsung killt Android sonst die App im Hintergrund. &Ouml;ffne: Android Einstellungen &rarr; Apps &rarr; Furtgo &rarr; Akku &rarr; &laquo;Nicht eingeschr&auml;nkt&raquo; bzw. &laquo;Akku-Optimierung deaktivieren&raquo;.</li>
+      </ol>
+      <p>Danach Furtgo neu starten und online schalten &mdash; die Bubble sollte erscheinen.</p>
+    </details>
+
+    <details>
+      <summary>Beim Auftrag h&ouml;re ich keinen Ton</summary>
+      <p>Furtgo nutzt den Standard-Benachrichtigungston deines Telefons. Wenn dein Telefon stumm geschaltet ist, kommt kein Ton.</p>
+      <p>So setzt du einen lauten Ton speziell f&uuml;r Furtgo-Auftr&auml;ge:</p>
+      <ol>
+        <li>Android Einstellungen &rarr; Apps &rarr; Furtgo &rarr; Benachrichtigungen</li>
+        <li>Kanal <strong>&laquo;Fahrtanfragen&raquo;</strong> antippen</li>
+        <li>Ton ausw&auml;hlen (am besten einen langen Klingelton)</li>
+        <li>Lautst&auml;rke pr&uuml;fen</li>
+      </ol>
+      <p>Wenn der Auftrag-Modal direkt in der App erscheint (App im Vordergrund), spielt Furtgo den eingebauten Kalimba-Sound &mdash; unabh&auml;ngig vom System-Ton.</p>
+    </details>
+
+    <details>
+      <summary>Ich bin online, bekomme aber keine Auftr&auml;ge</summary>
+      <p>M&ouml;gliche Ursachen:</p>
+      <ul>
+        <li><strong>Standort nicht aktuell:</strong> in der App auf die Karte tippen, dann sehen ob dein Standort dort liegt wo du wirklich bist. Falls nicht: Standort-Berechtigung pr&uuml;fen (Android Einstellungen &rarr; Apps &rarr; Furtgo &rarr; Berechtigungen &rarr; Standort &rarr; &laquo;Immer zulassen&raquo;).</li>
+        <li><strong>Kein Fahrgast in der N&auml;he:</strong> Furtgo zeigt deinen Standort nur Fahrg&auml;sten im Umkreis von 15 km. Pr&uuml;fe ob die App in deinem Marktgebiet schon aktiv ist.</li>
+        <li><strong>Du wirst nicht als &laquo;online&raquo; gesehen:</strong> kurz offline schalten und wieder online &mdash; das aktualisiert deinen Status.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Wie verifiziere ich mich als Fahrer?</summary>
+      <p>Nach der Registrierung musst du folgende Dokumente in der App hochladen (Profil &rarr; Dokumente):</p>
+      <ul>
+        <li>Fahrzeugausweis</li>
+        <li>F&uuml;hrerschein vorne und hinten</li>
+        <li>Strafregisterauszug (nicht &auml;lter als 3 Monate)</li>
+        <li>UID- oder Handelsregisterauszug</li>
+      </ul>
+      <p>Sobald alle Dokumente hochgeladen sind, pr&uuml;ft das Furtgo-Team deine Daten &mdash; in der Regel innerhalb von 24 bis 48 Stunden. Du erh&auml;ltst eine E-Mail-Best&auml;tigung sobald du freigeschaltet bist.</p>
+    </details>
+
+    <details>
+      <summary>Die Karte friert ein oder die App reagiert nicht mehr</summary>
+      <p>Erste Schritte:</p>
+      <ol>
+        <li>App komplett schliessen (Multi-Tasking-Ansicht, Furtgo wegwischen)</li>
+        <li>Wenn n&ouml;tig: Android Einstellungen &rarr; Apps &rarr; Furtgo &rarr; Stoppen erzwingen</li>
+        <li>Bubble-Benachrichtigung herunterwischen falls sie noch sichtbar ist</li>
+        <li>App neu &ouml;ffnen und einloggen</li>
+      </ol>
+      <p>Wenn das Problem &ouml;fter auftritt: Screenshot machen + Uhrzeit notieren und an <a href="mailto:support.furtgo@gmail.com">support.furtgo@gmail.com</a> melden.</p>
+    </details>
+
+    <details>
+      <summary>Wie wechsle ich zwischen Furtgo und Uber/Bolt?</summary>
+      <p>Du kannst parallel mit mehreren Apps fahren. Furtgo l&auml;uft im Hintergrund weiter, solange du online bist &mdash; die Bubble zeigt deinen Status.</p>
+      <p>Falls dein Akku zu stark belastet wird: Furtgo offline schalten wenn du gerade fest in einer anderen Plattform-Fahrt bist, und nach Abschluss wieder online.</p>
+    </details>
+  </div>
+
+  <!-- ABO & ZAHLUNG -->
+  <div class="card" id="abo">
+    <h2>Abo &amp; Zahlung</h2>
+
+    <details>
+      <summary>Wie schliesse ich ein Abo ab?</summary>
+      <p>In der App: Profil &rarr; Einstellungen &rarr; &laquo;Abo abschliessen&raquo;. Du wirst auf eine sichere PostFinance-Bezahlseite weitergeleitet, wo du deine Kreditkarte oder PostFinance Card hinterlegst. Nach erfolgreicher Belastung (CHF 60) ist dein Abo sofort aktiv.</p>
+    </details>
+
+    <details>
+      <summary>Wie k&uuml;ndige ich mein Abo?</summary>
+      <p>Profil &rarr; Einstellungen &rarr; &laquo;Abo k&uuml;ndigen&raquo;. Dein Zugang bleibt bis zum Ende der bereits bezahlten Periode bestehen. Du kannst innerhalb dieser Zeit jederzeit wieder reaktivieren ohne neu zahlen zu m&uuml;ssen.</p>
+    </details>
+
+    <details>
+      <summary>Wo finde ich meine Rechnungen?</summary>
+      <p>In der App: Profil &rarr; Einstellungen &rarr; &laquo;Meine Rechnungen&raquo;. Jede Rechnung wird zus&auml;tzlich per E-Mail an die hinterlegte Adresse geschickt (PDF im Anhang).</p>
+      <p>Wenn die E-Mail nicht ankommt: Spam-Ordner pr&uuml;fen. Absender ist <code>support.furtgo@gmail.com</code>.</p>
+    </details>
+
+    <details>
+      <summary>Was passiert wenn meine Karte nicht belastet werden kann?</summary>
+      <p>Furtgo versucht es noch dreimal im Abstand von je zwei Tagen (insgesamt sechs Tage). Du erh&auml;ltst jeweils eine Push-Benachrichtigung. Falls alle Versuche fehlschlagen, wird dein Abo deaktiviert und du musst es manuell mit einer neuen Karte erneut starten.</p>
+    </details>
+  </div>
+
+  <!-- INSTALLATION -->
+  <div class="card" id="installation">
+    <h2>Installation</h2>
+
+    <details>
+      <summary>Wie installiere ich die Android-App?</summary>
+      <ol>
+        <li>Gehe auf <a href="https://furtgo.ch/download">furtgo.ch/download</a></li>
+        <li>APK herunterladen</li>
+        <li>Beim Installieren fragt Android: &laquo;Installation aus unbekannten Quellen erlauben?&raquo; &rarr; zustimmen (Furtgo ist nicht im Play Store, das ist normal)</li>
+        <li>Bei zuk&uuml;nftigen Updates: gleiche Seite besuchen, neuen APK installieren &mdash; deine Daten bleiben erhalten</li>
+      </ol>
+    </details>
+
+    <details>
+      <summary>Ich habe ein iPhone &mdash; wie funktioniert das?</summary>
+      <p><strong>Als Fahrgast:</strong> &Ouml;ffne <a href="https://app.furtgo.ch">app.furtgo.ch</a> in Safari, tippe auf das Teilen-Symbol und w&auml;hle &laquo;Zum Home-Bildschirm hinzuf&uuml;gen&raquo;. Du hast dann ein Furtgo-Icon wie eine normale App.</p>
+      <p><strong>Als Fahrer:</strong> die Fahrer-Funktionen brauchen Hintergrund-GPS und Push-Notifications, die Apple in Safari einschr&auml;nkt. Aktuell ist die Fahrer-App nur f&uuml;r Android verf&uuml;gbar. Eine iOS-Version ist in Planung sobald genug iPhone-Fahrer das anfragen.</p>
+    </details>
+
+    <details>
+      <summary>Mein Login geht nicht / Passwort vergessen</summary>
+      <p>Auf der Login-Seite: &laquo;Passwort vergessen?&raquo; tippen, E-Mail-Adresse eingeben &mdash; du bekommst einen Link zum Zur&uuml;cksetzen.</p>
+      <p>Wenn der Link nicht ankommt: Spam-Ordner pr&uuml;fen, Absender ist Firebase / Google im Auftrag von Furtgo.</p>
+      <p>Wenn du nicht mehr weisst welche E-Mail du verwendet hast: schreib an <a href="mailto:support.furtgo@gmail.com">support.furtgo@gmail.com</a> mit deinem Vor- und Nachnamen.</p>
+    </details>
+  </div>
+
+  <!-- FAHRGAST -->
+  <div class="card" id="fahrgast">
+    <h2>F&uuml;r Fahrg&auml;ste</h2>
+
+    <details>
+      <summary>Wie bestelle ich eine Fahrt?</summary>
+      <ol>
+        <li>App &ouml;ffnen, Abhol- und Zielort eingeben</li>
+        <li>Tarif w&auml;hlen (Mini / Plus / Limu / Frei)</li>
+        <li>Bestellen &mdash; verf&uuml;gbare Fahrer in der N&auml;he werden benachrichtigt</li>
+        <li>Sobald ein Fahrer annimmt, siehst du sein Auto und Fahrzeit zum Abholort</li>
+      </ol>
+    </details>
+
+    <details>
+      <summary>Wie bezahle ich die Fahrt?</summary>
+      <p>Direkt beim Fahrer am Ende der Fahrt &mdash; bar, TWINT oder per Karte (wenn der Fahrer ein Kartenleser dabei hat). Furtgo ist nur Vermittler, die Bezahlung l&auml;uft <strong>direkt</strong> zwischen dir und dem Fahrer.</p>
+    </details>
+
+    <details>
+      <summary>Der Fahrer ist nicht aufgetaucht / hat abgesagt</summary>
+      <p>Wenn ein Fahrer ablehnt, sucht die App automatisch den n&auml;chsten verf&uuml;gbaren Fahrer. Falls niemand verf&uuml;gbar ist: ein paar Minuten warten und erneut bestellen.</p>
+      <p>Bei wiederholten Problemen melde es bitte an <a href="mailto:support.furtgo@gmail.com">support.furtgo@gmail.com</a>.</p>
+    </details>
+
+    <details>
+      <summary>Wie bewerte ich den Fahrer?</summary>
+      <p>Nach jeder Fahrt erscheint der Bewertungs-Dialog: 1-5 Sterne und optional ein Kommentar. Deine Bewertung ist anonym &mdash; der Fahrer sieht den Schnitt seiner Bewertungen, nicht wer ihn wie bewertet hat.</p>
+    </details>
+  </div>
+
+  <!-- KONTAKT -->
+  <div class="kontakt">
+    <h2>Brauchst du weitere Hilfe?</h2>
+    <p style="margin-top: 12px; line-height: 1.7;">
+      E-Mail: <a href="mailto:support.furtgo@gmail.com">support.furtgo@gmail.com</a><br />
+      Telefon: <a href="tel:+41783157516" style="color:#FFD700;">078 315 75 16</a>
+    </p>
+    <p style="margin-top: 12px; font-size: 13px; color: #aaa;">Wir antworten in der Regel innerhalb von 24 Stunden.</p>
+  </div>
+
+</div>
+
+<footer>
+  <p>&copy; 2026 Bajic Mobility Solutions &middot; Furtgo &middot; <a href="legal.html" style="color:#FFD700;">Rechtliches</a></p>
+</footer>
+
+</body>
+</html>
