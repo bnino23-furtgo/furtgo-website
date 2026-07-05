@@ -164,20 +164,6 @@
       margin: 32px auto;
       max-width: 400px;
     }
-    .zaehler-bar {
-      height: 10px;
-      background: #16213e;
-      border-radius: 5px;
-      overflow: hidden;
-      margin-bottom: 8px;
-    }
-    .zaehler-fill {
-      height: 100%;
-      width: 12%;
-      background: linear-gradient(90deg, #FFD700, #ffaa00);
-      border-radius: 5px;
-      transition: width 1s ease;
-    }
     .zaehler-text {
       font-size: 18px;
       color: #aaa;
@@ -256,38 +242,6 @@
       margin-top: 12px;
     }
 
-    /* ZITAT */
-    .zitat-section {
-      padding: 60px 20px;
-      max-width: 700px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .zitat-box {
-      background: #16213e;
-      border-left: 4px solid #FFD700;
-      border-radius: 14px;
-      padding: 32px 28px;
-      font-style: italic;
-      font-size: clamp(17px, 2.8vw, 22px);
-      line-height: 1.5;
-      color: #f5f5f5;
-    }
-    .zitat-box .quote-mark {
-      color: #FFD700;
-      font-size: 48px;
-      line-height: 0.2;
-      vertical-align: -6px;
-      margin-right: 4px;
-    }
-    .zitat-autor {
-      margin-top: 20px;
-      font-style: normal;
-      font-size: 14px;
-      color: #aaa;
-    }
-    .zitat-autor strong { color: #FFD700; font-weight: 700; }
-
     /* MANIFEST */
     .manifest-section {
       background: linear-gradient(180deg, #1a1a2e 0%, #0d0d1a 100%);
@@ -340,8 +294,8 @@
 <!-- HERO -->
 <div class="hero">
   <div class="hero-badge">PRELAUNCH · EINE BEWEGUNG AUS DER SCHWEIZ</div>
-  <h1>Unterstütze <span class="gold">Furtgo</span><br>in der Prelaunch-Phase —<br>für deine <span class="gold">bessere Zukunft.</span></h1>
-  <p class="subtitle">Werde dein eigener Chef.<br>Bestimme deinen Preis.<br>Behalte <strong style="color:#fff;">100%</strong> deines Umsatzes.<br><br>Nur CHF 60 Fixgebühr. Keine Provision. Volle Freiheit.</p>
+  <h1>Behalte <span class="gold">100%</span> deines Umsatzes.<br><span class="gold">CHF 60</span>/Monat statt 25% Provision.</h1>
+  <p class="subtitle">Werde dein eigener Chef.<br>Bestimme deinen Preis.<br>Keine Provision. Volle Freiheit.</p>
 
   <div class="rechnung">
     <div class="rechnung-zeile">
@@ -399,6 +353,33 @@
   </div>
 </div>
 
+<!-- FAHRGAESTE -->
+<div class="section">
+  <h2 class="section-title">Und woher kommen die <span class="gold">Fahrgäste</span>?</h2>
+  <div class="vorteile-grid">
+    <div class="vorteil-card">
+      <div class="vorteil-icon">👥</div>
+      <div class="vorteil-titel">Bring deine Stammkunden mit</div>
+      <div class="vorteil-text">Zeig deinen Kunden app.furtgo.ch — funktioniert auf jedem Handy, auch iPhone, ganz ohne Installation. Sie buchen bequem per App statt per Anruf.</div>
+    </div>
+    <div class="vorteil-card">
+      <div class="vorteil-icon">🤝</div>
+      <div class="vorteil-titel">Jeder Fahrer stärkt alle</div>
+      <div class="vorteil-text">Jeder Gründer-Fahrer bringt seine eigenen Kunden auf die Plattform. So wächst der Fahrgast-Pool für alle — von Fahrern, für Fahrer.</div>
+    </div>
+    <div class="vorteil-card">
+      <div class="vorteil-icon">💯</div>
+      <div class="vorteil-titel">Du behältst immer 100%</div>
+      <div class="vorteil-text">Ob Stammkunde oder neuer Fahrgast: Jede Fahrt gehört komplett dir. Keine Provision — nie.</div>
+    </div>
+    <div class="vorteil-card">
+      <div class="vorteil-icon">📇</div>
+      <div class="vorteil-titel">Dein Werbematerial</div>
+      <div class="vorteil-text">Den <a href="/assets/qr-app-furtgo.png" style="color:#FFD700;">QR-Code für deine Fahrgäste</a> gibt's hier zum Herunterladen — für Visitenkarte, WhatsApp oder den Aushang im Auto.</div>
+    </div>
+  </div>
+</div>
+
 <!-- MANIFEST -->
 <div class="manifest-section">
   <div class="manifest-inner">
@@ -406,14 +387,6 @@
     <p class="manifest-line">Sei kein Spielball von ausländischen Investoren. <span class="gold">Sei Chef deiner eigenen Software.</span></p>
     <p class="manifest-line">Robotaxi kommt — und niemand fragt dich um Erlaubnis. <span class="gold">Sei bereit, bevor es zu spät ist.</span></p>
     <p class="manifest-line">Wenn die selbstfahrenden Taxis rollen, gewinnt wer heute schon Chef ist. <span class="gold">Werde es. Solange du noch kannst.</span></p>
-  </div>
-</div>
-
-<!-- ZITAT -->
-<div class="zitat-section">
-  <div class="zitat-box">
-    <span class="quote-mark">„</span>Endlich eine App, bei der ich weiss, wofür ich bezahle. Die 60 CHF Fixkosten habe ich schnell wieder drin.<span class="quote-mark">"</span>
-    <div class="zitat-autor">— <strong>Marc</strong>, Limousinenfahrer aus Kloten</div>
   </div>
 </div>
 
@@ -426,14 +399,11 @@
     <div class="angebot-label">GRÜNDER-FAHRER</div>
     <div class="angebot-preis">CHF 60 <span class="klein">/Monat</span></div>
     <div class="angebot-detail">6 Monate Preisgarantie — weil Pioniere belohnt gehören</div>
-    <div class="angebot-garantie">Diesen Preis bekommst du nie wieder</div>
+    <div class="angebot-garantie">Und ab Monat 7? Dein Preis bleibt CHF 60, solange dein Abo läuft.<br>Spätere Preiserhöhungen betreffen nur Neueinsteiger.</div>
   </div>
 
   <div class="zaehler">
-    <div class="zaehler-bar">
-      <div class="zaehler-fill"></div>
-    </div>
-    <p class="zaehler-text"><strong>12 / 100</strong> Gründer-Plätze vergeben</p>
+    <p class="zaehler-text">Limitiert auf <strong>100</strong> Gründer-Plätze</p>
   </div>
 
   <a href="/download/" class="cta-btn">App herunterladen</a>
